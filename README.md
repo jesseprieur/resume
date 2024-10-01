@@ -2,6 +2,7 @@
 
 ```
 docker build -t jesse/latex ./latex
-docker run --rm -it --privileged --volume /Users/jesse.prieur/src/personal/resume:/resume jesse/latex
+docker run --rm -it --privileged --volume ./resume:/resume jesse/latex
+cd latex/
 xelatex resume.tex
 ```

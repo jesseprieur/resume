@@ -604,8 +604,12 @@
       {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
       {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
       \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
+      % \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}} % Add back in to revert
   \end{tabular*}%
+  \begin{FlushLeft} % Remove this and next 3 lines, to revert
+    \descriptionstyle{#5}
+  \end{FlushLeft}%
+  \vspace{4mm}
 }
 
 % Define an environment for cvsubentry
@@ -670,7 +674,7 @@
 
 % Define an environment for cvitems(for cventry)
 \newenvironment{cvitems}{%
-  \vspace{-4.0mm}
+  \vspace{-2.0mm} % Change to 4 to revert
   \begin{justify}
   \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
     \setlength{\parskip}{0pt}
@@ -678,7 +682,7 @@
 }{%
   \end{itemize}
   \end{justify}
-  \vspace{-4.0mm}
+  \vspace{-2.0mm} % Change to 4 to revert
 }
 
 
